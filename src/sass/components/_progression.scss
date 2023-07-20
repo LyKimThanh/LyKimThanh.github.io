@@ -1,0 +1,29 @@
+.progression {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__bar {
+    position: relative;
+    width: 80%;
+    height: 2rem;
+    background-color: $color-primary-lighter;
+
+    &--fill {
+      width: 89%;
+      height: 100%;
+      background-color: $color-primary;
+    }
+
+    &--text {
+      position: absolute;
+      right: 1;
+      top: 50%;
+      transform: translate(150%, -50%);
+    }
+  }
+}
+
+#progress-fill-2 {
+  width: 97%;
+}

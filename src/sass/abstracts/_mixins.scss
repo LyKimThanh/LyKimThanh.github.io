@@ -1,0 +1,32 @@
+// Media queries manager
+
+/*
+0-600px - phone
+600-900 Tablet portrait
+900-1200px Tablet landscape
+1200-18000 normal
+1800+ big desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint ==tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint ==tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint ==big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

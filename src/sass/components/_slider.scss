@@ -1,0 +1,104 @@
+.slider {
+  max-width: 100%;
+  height: 40rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+
+  border: none;
+  font-family: inherit;
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonial {
+  width: 65%;
+  position: relative;
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -7.5rem;
+    left: -7rem;
+    line-height: 1;
+    font-size: 50rem;
+    font-family: inherit;
+    color: $color-primary-lighter;
+  }
+
+  &::after {
+    content: "\201D";
+    position: absolute;
+    top: 2rem;
+    right: 10rem;
+    line-height: 1;
+    font-size: 50rem;
+    font-family: inherit;
+    color: $color-primary-lighter;
+  }
+
+  &__header {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+    //color grey
+  }
+
+  &__author {
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    column-gap: 1rem;
+  }
+
+  &__profile {
+    grid-row: 1 / span 2;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: rgb(161, 155, 155);
+  }
+
+  &__name {
+    font-size: $default-font-size;
+    font-weight: 500;
+    align-self: end;
+    margin: 0;
+  }
+
+  &__location {
+    font-size: 1.5rem;
+  }
+}

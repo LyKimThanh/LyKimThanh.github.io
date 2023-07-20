@@ -1,0 +1,17 @@
+.btn {
+  text-decoration: none;
+  color: $color-primary;
+  background-color: white;
+  padding: 1rem 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.btn--blue {
+  color: white;
+  background-color: $color-primary;
+  grid-column: 2/3;
+}
+.btn--borderless {
+  background-color: transparent;
+  padding: 0;
+}
