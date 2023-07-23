@@ -9,20 +9,22 @@
 html {
   font-size: 62.5%;
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     font-size: 56.5%;
   }
-  @include respond(tab-port) {
+
+  @include respond(tab-land) {
+    font-size: 52.5%;
+  }
+  @include respond(phone) {
     font-size: 50%;
   }
-
   @include respond(big-desktop) {
     font-size: 75%;
   }
 }
 .container {
   box-sizing: border-box;
-
   display: grid;
   grid-template-rows: 95vh repeat(7, min-content);
   grid-template-columns:

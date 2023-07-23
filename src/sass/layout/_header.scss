@@ -26,6 +26,10 @@
     font-size: 1.6rem;
     color: black;
   }
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .hero {
@@ -81,8 +85,6 @@
 }
 
 .atouts {
-  margin: 10rem;
-
   display: grid;
   // grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -90,8 +92,9 @@
 }
 
 .atout {
+  max-height: 30rem;
   box-shadow: 0 1rem 1.6rem rgba(0, 0, 0, 0.2);
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -100,7 +103,8 @@
 
   &__icon {
     fill: $color-primary;
-    width: 4.5rem;
+    max-width: 4.5rem;
+    max-height: 4.5rem;
   }
 
   &__text {
